@@ -80,90 +80,78 @@
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"ggsegverse/ggsegCerebellum"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
-</h2>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ggsegverse/ggsegCerebellum" class="external-link">ggsegCerebellum</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggsegverse.github.io/ggseg/" class="external-link">ggseg</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">cerebellum_anatom</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-</div>
-<div class="section level2">
 <h2 id="atlases">Atlases<a class="anchor" aria-label="anchor" href="#atlases"></a>
 </h2>
-<table class="table">
-<colgroup>
-<col width="18%">
-<col width="27%">
-<col width="24%">
-<col width="29%">
-</colgroup>
-<thead><tr class="header">
-<th>Atlas</th>
-<th>Function</th>
-<th>Regions</th>
-<th>Reference</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>Anatomical lobules</td>
-<td><code>cerebellum_anatom()</code></td>
-<td>Lobules + nuclei</td>
-<td>Diedrichsen et al. (2009)</td>
-</tr>
-<tr class="even">
-<td>Buckner 7-Network</td>
-<td><code>cerebellum_buckner7()</code></td>
-<td>7 networks</td>
-<td>Buckner et al. (2011)</td>
-</tr>
-<tr class="odd">
-<td>Buckner 17-Network</td>
-<td><code>cerebellum_buckner17()</code></td>
-<td>17 networks</td>
-<td>Buckner et al. (2011)</td>
-</tr>
-<tr class="even">
-<td>Ji 10-Network</td>
-<td><code>cerebellum_ji10()</code></td>
-<td>10 networks</td>
-<td>Ji et al. (2019)</td>
-</tr>
-<tr class="odd">
-<td>MDTB 10-Region</td>
-<td><code>cerebellum_mdtb10()</code></td>
-<td>10 task regions</td>
-<td>King et al. (2019)</td>
-</tr>
-<tr class="even">
-<td>Xue 10-Network</td>
-<td><code>cerebellum_xue10()</code></td>
-<td>10 networks</td>
-<td>Xue et al. (2021)</td>
-</tr>
-<tr class="odd">
-<td>Nettekoven 32</td>
-<td><code>cerebellum_nettekoven32()</code></td>
-<td>32 regions</td>
-<td>Nettekoven et al. (2024)</td>
-</tr>
-<tr class="even">
-<td>Nettekoven 68</td>
-<td><code>cerebellum_nettekoven68()</code></td>
-<td>68 regions</td>
-<td>Nettekoven et al. (2024)</td>
-</tr>
-</tbody>
-</table>
+<div class="section level3">
+<h3 id="cerebellum_anatom">cerebellum_anatom<a class="anchor" aria-label="anchor" href="#cerebellum_anatom"></a>
+</h3>
+<p>Anatomical lobules and nuclei (Diedrichsen et al., 2009).</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ggsegverse/ggsegCerebellum" class="external-link">ggsegCerebellum</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">cerebellum_anatom</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-cerebellum_anatom-1.png" alt="" width="100%"></p>
 </div>
-<div class="section level2">
-<h2 id="data-source">Data source<a class="anchor" aria-label="anchor" href="#data-source"></a>
-</h2>
-<p>All NIfTI parcellations from <a href="https://github.com/DiedrichsenLab/cerebellar_atlases" class="external-link">DiedrichsenLab/cerebellar_atlases</a> in MNI152NLin6Asym space.</p>
+<div class="section level3">
+<h3 id="cerebellum_buckner7">cerebellum_buckner7<a class="anchor" aria-label="anchor" href="#cerebellum_buckner7"></a>
+</h3>
+<p>Buckner 7-network cerebellar parcellation.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">cerebellum_buckner7</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-cerebellum_buckner7-1.png" alt="" width="100%"></p>
+</div>
+<div class="section level3">
+<h3 id="cerebellum_buckner17">cerebellum_buckner17<a class="anchor" aria-label="anchor" href="#cerebellum_buckner17"></a>
+</h3>
+<p>Buckner 17-network cerebellar parcellation.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">cerebellum_buckner17</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-cerebellum_buckner17-1.png" alt="" width="100%"></p>
+</div>
+<div class="section level3">
+<h3 id="cerebellum_ji10">cerebellum_ji10<a class="anchor" aria-label="anchor" href="#cerebellum_ji10"></a>
+</h3>
+<p>Ji 10-network subcortical parcellation.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">cerebellum_ji10</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-cerebellum_ji10-1.png" alt="" width="100%"></p>
+</div>
+<div class="section level3">
+<h3 id="cerebellum_mdtb10">cerebellum_mdtb10<a class="anchor" aria-label="anchor" href="#cerebellum_mdtb10"></a>
+</h3>
+<p>MDTB 10-region task-based parcellation (King et al., 2019).</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">cerebellum_mdtb10</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-cerebellum_mdtb10-1.png" alt="" width="100%"></p>
+</div>
+<div class="section level3">
+<h3 id="cerebellum_xue10">cerebellum_xue10<a class="anchor" aria-label="anchor" href="#cerebellum_xue10"></a>
+</h3>
+<p>Xue 10-network individual parcellation.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">cerebellum_xue10</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-cerebellum_xue10-1.png" alt="" width="100%"></p>
+</div>
+<div class="section level3">
+<h3 id="cerebellum_nettekoven32">cerebellum_nettekoven32<a class="anchor" aria-label="anchor" href="#cerebellum_nettekoven32"></a>
+</h3>
+<p>Nettekoven symmetric 32-region hierarchical parcellation.</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">cerebellum_nettekoven32</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-cerebellum_nettekoven32-1.png" alt="" width="100%"></p>
+</div>
+<div class="section level3">
+<h3 id="cerebellum_nettekoven68">cerebellum_nettekoven68<a class="anchor" aria-label="anchor" href="#cerebellum_nettekoven68"></a>
+</h3>
+<p>Nettekoven symmetric 68-region hierarchical parcellation.</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">cerebellum_nettekoven68</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-cerebellum_nettekoven68-1.png" alt="" width="100%"> ## Data source</p>
+<p>All NIfTI parcellations from <a href="https://github.com/DiedrichsenLab/cerebellar_atlases" class="external-link">DiedrichsenLab/cerebellar_atlases</a> in MNI space.</p>
 <ul>
 <li>
 <strong>Date obtained</strong>: 2026-03-28</li>
 </ul>
+</div>
 </div>
 </div>
   </div>
