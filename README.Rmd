@@ -1,10 +1,21 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 # ggsegCerebellum
 
 <!-- badges: start -->
-
 [![R-CMD-check](https://github.com/ggsegverse/ggsegCerebellum/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggsegverse/ggsegCerebellum/actions/workflows/R-CMD-check.yaml)
 [![r-universe](https://ggsegverse.r-universe.dev/badges/ggsegCerebellum)](https://ggsegverse.r-universe.dev/ggsegCerebellum)
 <!-- badges: end -->
@@ -13,7 +24,7 @@ Cerebellar Atlases for the ggsegverse Ecosystem.
 
 ## Installation
 
-``` r
+```{r, eval = FALSE}
 # From r-universe
 install.packages("ggsegCerebellum", repos = "https://ggsegverse.r-universe.dev")
 
@@ -23,91 +34,72 @@ remotes::install_github("ggsegverse/ggsegCerebellum")
 ```
 
 ## Atlases
-
 ### cerebellum_anatom
 
 Anatomical lobules and nuclei (Diedrichsen et al., 2009).
 
-``` r
+```{r cerebellum_anatom}
 library(ggsegCerebellum)
 plot(cerebellum_anatom())
 ```
-
-<img src="man/figures/README-cerebellum_anatom-1.png" alt="" width="100%" />
 
 ### cerebellum_buckner7
 
 Buckner 7-network cerebellar parcellation.
 
-``` r
+```{r cerebellum_buckner7}
 plot(cerebellum_buckner7())
 ```
-
-<img src="man/figures/README-cerebellum_buckner7-1.png" alt="" width="100%" />
 
 ### cerebellum_buckner17
 
 Buckner 17-network cerebellar parcellation.
 
-``` r
+```{r cerebellum_buckner17}
 plot(cerebellum_buckner17())
 ```
-
-<img src="man/figures/README-cerebellum_buckner17-1.png" alt="" width="100%" />
 
 ### cerebellum_ji10
 
 Ji 10-network subcortical parcellation.
 
-``` r
+```{r cerebellum_ji10}
 plot(cerebellum_ji10())
 ```
-
-<img src="man/figures/README-cerebellum_ji10-1.png" alt="" width="100%" />
 
 ### cerebellum_mdtb10
 
 MDTB 10-region task-based parcellation (King et al., 2019).
 
-``` r
+```{r cerebellum_mdtb10}
 plot(cerebellum_mdtb10())
 ```
-
-<img src="man/figures/README-cerebellum_mdtb10-1.png" alt="" width="100%" />
 
 ### cerebellum_xue10
 
 Xue 10-network individual parcellation.
 
-``` r
+```{r cerebellum_xue10}
 plot(cerebellum_xue10())
 ```
-
-<img src="man/figures/README-cerebellum_xue10-1.png" alt="" width="100%" />
 
 ### cerebellum_nettekoven32
 
 Nettekoven symmetric 32-region hierarchical parcellation.
 
-``` r
+```{r cerebellum_nettekoven32}
 plot(cerebellum_nettekoven32())
 ```
-
-<img src="man/figures/README-cerebellum_nettekoven32-1.png" alt="" width="100%" />
 
 ### cerebellum_nettekoven68
 
 Nettekoven symmetric 68-region hierarchical parcellation.
 
-``` r
+```{r cerebellum_nettekoven68}
 plot(cerebellum_nettekoven68())
 ```
+## Data source
 
-<img src="man/figures/README-cerebellum_nettekoven68-1.png" alt="" width="100%" />
-\## Data source
-
-All NIfTI parcellations from
-[DiedrichsenLab/cerebellar_atlases](https://github.com/DiedrichsenLab/cerebellar_atlases)
-in MNI space.
+All NIfTI parcellations from [DiedrichsenLab/cerebellar_atlases](https://github.com/DiedrichsenLab/cerebellar_atlases) in MNI space.
 
 - **Date obtained**: 2026-03-28
