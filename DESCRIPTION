@@ -1,0 +1,33 @@
+Package: ggsegCerebellum
+Title: Cerebellar Atlases for the 'ggsegverse' Ecosystem
+Version: 1.0.0
+Authors@R: c(person("Athanasia Mo", "Mowinckel",
+                    email = "a.m.mowinckel@psykologi.uio.no",
+                    role = c("aut", "cre"),
+                    comment = c(ORCID = "0000-0002-5756-0223")),
+            person("Didac", "Vidal-Pineiro",
+                    email = "d.v.pineiro@psykologi.uio.no",
+                    role = c("aut"),
+                    comment = c(ORCID = "0000-0001-9997-9156")))
+Description: Collection of cerebellar parcellation atlases for the 'ggsegverse'
+    ecosystem. Includes anatomical (Diedrichsen 2009), resting-state network
+    (Buckner 2011, Ji 2019, Xue 2021), task-based (King/MDTB 2019), and
+    hierarchical functional (Nettekoven 2024) parcellations. All atlases
+    derived from the DiedrichsenLab cerebellar atlas collection.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends:
+    R (>= 4.1)
+Imports:
+    ggseg.formats
+Suggests:
+    ggseg,
+    ggplot2,
+    testthat (>= 3.0.0),
+    vdiffr
+URL: https://github.com/ggsegverse/ggsegCerebellum
+BugReports: https://github.com/ggsegverse/ggsegCerebellum/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Config/testthat/edition: 3
+Config/Needs/website: ggsegverse/ggseg.docs
