@@ -9,6 +9,9 @@
 #' @return A [ggseg.formats::ggseg_atlas] object (subcortical).
 #' @import ggseg.formats
 #' @export
+#' @examples
+#' cerebellum_anatom()
+#' plot(cerebellum_anatom())
 cerebellum_anatom <- function() .cerebellum_anatom
 
 #' Cerebellar Buckner 7-Network Atlas
@@ -23,6 +26,9 @@ cerebellum_anatom <- function() .cerebellum_anatom
 #'   \doi{10.1152/jn.00339.2011}
 #' @return A [ggseg.formats::ggseg_atlas] object (subcortical).
 #' @export
+#' @examples
+#' cerebellum_buckner7()
+#' plot(cerebellum_buckner7())
 cerebellum_buckner7 <- function() .cerebellum_buckner7
 
 #' Cerebellar Buckner 17-Network Atlas
@@ -37,6 +43,9 @@ cerebellum_buckner7 <- function() .cerebellum_buckner7
 #'   \doi{10.1152/jn.00339.2011}
 #' @return A [ggseg.formats::ggseg_atlas] object (subcortical).
 #' @export
+#' @examples
+#' cerebellum_buckner17()
+#' plot(cerebellum_buckner17())
 cerebellum_buckner17 <- function() .cerebellum_buckner17
 
 #' Cerebellar Ji 10-Network Atlas
@@ -50,6 +59,9 @@ cerebellum_buckner17 <- function() .cerebellum_buckner17
 #'   \doi{10.1016/j.neuroimage.2018.10.006}
 #' @return A [ggseg.formats::ggseg_atlas] object (subcortical).
 #' @export
+#' @examples
+#' cerebellum_ji10()
+#' plot(cerebellum_ji10())
 cerebellum_ji10 <- function() .cerebellum_ji10
 
 #' Cerebellar MDTB 10-Region Atlas (King 2019)
@@ -63,6 +75,9 @@ cerebellum_ji10 <- function() .cerebellum_ji10
 #'   22(8):1371-1378. \doi{10.1038/s41593-019-0436-x}
 #' @return A [ggseg.formats::ggseg_atlas] object (subcortical).
 #' @export
+#' @examples
+#' cerebellum_mdtb10()
+#' plot(cerebellum_mdtb10())
 cerebellum_mdtb10 <- function() .cerebellum_mdtb10
 
 #' Cerebellar Xue 10-Network Atlas
@@ -77,6 +92,9 @@ cerebellum_mdtb10 <- function() .cerebellum_mdtb10
 #'   \doi{10.1523/JNEUROSCI.0738-20.2020}
 #' @return A [ggseg.formats::ggseg_atlas] object (subcortical).
 #' @export
+#' @examples
+#' cerebellum_xue10()
+#' plot(cerebellum_xue10())
 cerebellum_xue10 <- function() .cerebellum_xue10
 
 #' Cerebellar Nettekoven 32-Region Atlas
@@ -90,6 +108,9 @@ cerebellum_xue10 <- function() .cerebellum_xue10
 #'   \doi{10.1038/s41467-024-52371-w}
 #' @return A [ggseg.formats::ggseg_atlas] object (subcortical).
 #' @export
+#' @examples
+#' cerebellum_nettekoven32()
+#' plot(cerebellum_nettekoven32())
 cerebellum_nettekoven32 <- function() .cerebellum_nettekoven32
 
 #' Cerebellar Nettekoven 68-Region Atlas
@@ -103,4 +124,7 @@ cerebellum_nettekoven32 <- function() .cerebellum_nettekoven32
 #'   \doi{10.1038/s41467-024-52371-w}
 #' @return A [ggseg.formats::ggseg_atlas] object (subcortical).
 #' @export
+#' @examples
+#' cerebellum_nettekoven68()
+#' plot(cerebellum_nettekoven68())
 cerebellum_nettekoven68 <- function() .cerebellum_nettekoven68
