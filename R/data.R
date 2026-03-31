@@ -3,6 +3,7 @@
 #' Probabilistic atlas of cerebellar lobules and deep cerebellar nuclei.
 #'
 #' @family ggseg_atlases
+#' @family cerebellar_atlases
 #' @references Diedrichsen J, Balsters JH, Flavell J, Cussans E, Ramnani N
 #'   (2009). A probabilistic MR atlas of the human cerebellum.
 #'   *NeuroImage*, 46(1):39-46. \doi{10.1016/j.neuroimage.2009.01.045}
@@ -19,6 +20,7 @@ cerebellum_anatom <- function() .cerebellum_anatom
 #' Assignment of cerebellar voxels to the Yeo 7 resting-state networks.
 #'
 #' @family ggseg_atlases
+#' @family cerebellar_atlases
 #' @references Buckner RL, Krienen FM, Castellanos A, Diaz JC, Yeo BTT
 #'   (2011). The organization of the human cerebellum estimated by
 #'   intrinsic functional connectivity.
@@ -36,6 +38,7 @@ cerebellum_buckner7 <- function() .cerebellum_buckner7
 #' Assignment of cerebellar voxels to the Yeo 17 resting-state networks.
 #'
 #' @family ggseg_atlases
+#' @family cerebellar_atlases
 #' @references Buckner RL, Krienen FM, Castellanos A, Diaz JC, Yeo BTT
 #'   (2011). The organization of the human cerebellum estimated by
 #'   intrinsic functional connectivity.
@@ -53,6 +56,7 @@ cerebellum_buckner17 <- function() .cerebellum_buckner17
 #' Subcortical resting-state parcellation into 10 networks.
 #'
 #' @family ggseg_atlases
+#' @family cerebellar_atlases
 #' @references Ji JL, Spronk M, Kulkarni K, Repovs G, Anticevic A, Cole MW
 #'   (2019). Mapping the human brain's cortical-subcortical functional
 #'   network organization. *NeuroImage*, 185:35-57.
@@ -69,6 +73,7 @@ cerebellum_ji10 <- function() .cerebellum_ji10
 #' Multi-Domain Task Battery parcellation of the cerebellum into 10 regions.
 #'
 #' @family ggseg_atlases
+#' @family cerebellar_atlases
 #' @references King M, Hernandez-Castillo CR, Poldrack RA, Ivry RB,
 #'   Diedrichsen J (2019). Functional boundaries in the human cerebellum
 #'   revealed by a multi-domain task battery. *Nature Neuroscience*,
@@ -86,6 +91,7 @@ cerebellum_mdtb10 <- function() .cerebellum_mdtb10
 #' cortical network territories.
 #'
 #' @family ggseg_atlases
+#' @family cerebellar_atlases
 #' @references Xue A, Kong R, Yang Q, et al. (2021). Local-global
 #'   parcellation of the human cerebellum from intrinsic functional
 #'   connectivity. *Journal of Neuroscience*, 41(35):7563-7575.
@@ -102,6 +108,7 @@ cerebellum_xue10 <- function() .cerebellum_xue10
 #' Hierarchical symmetric functional parcellation with 32 cerebellar regions.
 #'
 #' @family ggseg_atlases
+#' @family cerebellar_atlases
 #' @references Nettekoven C, Zhi D, Lau H, King M, Diedrichsen J (2024).
 #'   A hierarchical atlas of the human cerebellum for functional precision
 #'   mapping. *Nature Communications*, 15:8718.
@@ -118,6 +125,7 @@ cerebellum_nettekoven32 <- function() .cerebellum_nettekoven32
 #' Hierarchical symmetric functional parcellation with 68 cerebellar regions.
 #'
 #' @family ggseg_atlases
+#' @family cerebellar_atlases
 #' @references Nettekoven C, Zhi D, Lau H, King M, Diedrichsen J (2024).
 #'   A hierarchical atlas of the human cerebellum for functional precision
 #'   mapping. *Nature Communications*, 15:8718.
