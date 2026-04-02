@@ -32,11 +32,6 @@ read_lut <- function(lut_file) {
 
 atlases <- list(
   list(
-    name = "anatom",
-    file = "atl-Anatom_space-MNI_dseg.nii",
-    lut = "anatom.tsv"
-  ),
-  list(
     name = "buckner7",
     file = "atl-Buckner7_space-MNI_dseg.nii",
     lut = "buckner7.tsv"

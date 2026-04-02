@@ -1,4 +1,4 @@
-# ggsegCerebellum (development version)
+# ggsegCerebellum 1.0.0.9001
 
 ## Deep cerebellar nuclei
 
