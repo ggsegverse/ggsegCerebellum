@@ -25,6 +25,8 @@ Suggests:
     ggplot2,
     testthat (>= 3.0.0),
     vdiffr
+Remotes:
+    ggsegverse/ggseg
 URL: https://github.com/ggsegverse/ggsegCerebellum
 BugReports: https://github.com/ggsegverse/ggsegCerebellum/issues
 Roxygen: list(markdown = TRUE)
