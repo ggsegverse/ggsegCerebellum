@@ -1,13 +1,27 @@
-
+---
+format: gfm
+---
 
 <!-- README.md is generated from README.qmd. Please edit that file -->
+
+```{r}
+#| label: setup
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%",
+  fig.width = 10,
+  fig.retina = 3
+)
+```
 
 # ggsegCerebellum
 
 <!-- badges: start -->
-
 [![R-CMD-check](https://github.com/ggsegverse/ggsegCerebellum/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggsegverse/ggsegCerebellum/actions/workflows/R-CMD-check.yaml)
-[![r-universe](https://ggseg.r-universe.dev/badges/ggsegCerebellum.png)](https://ggseg.r-universe.dev/ggsegCerebellum)
+[![r-universe](https://ggseg.r-universe.dev/badges/ggsegCerebellum)](https://ggseg.r-universe.dev/ggsegCerebellum)
 <!-- badges: end -->
 
 Cerebellar atlases for the ggseg ecosystem.
@@ -17,7 +31,9 @@ Cerebellar atlases for the ggseg ecosystem.
 We recommend installing the ggseg-atlases through the ggseg
 [r-universe](https://ggseg.r-universe.dev/ui#builds):
 
-``` r
+```{r}
+#| label: install-r-universe
+#| eval: false
 options(repos = c(
   ggseg = "https://ggseg.r-universe.dev",
   CRAN = "https://cloud.r-project.org"
@@ -28,14 +44,15 @@ install.packages("ggsegCerebellum")
 
 You can install this package from [GitHub](https://github.com/) with:
 
-``` r
+```r
 # install.packages("pak")
 pak::pak("ggsegverse/ggsegCerebellum")
 ```
 
 ## Anatomical atlas
 
-``` r
+```{r}
+#| label: cerebellum-anatom
 library(ggseg)
 library(ggsegCerebellum)
 library(ggplot2)
@@ -49,12 +66,10 @@ ggplot() +
   theme_void()
 ```
 
-<img src="man/figures/README-cerebellum-anatom-1.png"
-style="width:100.0%" />
-
 ## Buckner 7-network
 
-``` r
+```{r}
+#| label: cerebellum-buckner7
 ggplot() +
   geom_brain(
     atlas = cerebellum_buckner7(),
@@ -64,12 +79,10 @@ ggplot() +
   theme_void()
 ```
 
-<img src="man/figures/README-cerebellum-buckner7-1.png"
-style="width:100.0%" />
-
 ## Buckner 17-network
 
-``` r
+```{r}
+#| label: cerebellum-buckner17
 ggplot() +
   geom_brain(
     atlas = cerebellum_buckner17(),
@@ -79,12 +92,10 @@ ggplot() +
   theme_void()
 ```
 
-<img src="man/figures/README-cerebellum-buckner17-1.png"
-style="width:100.0%" />
-
 ## Ji 10
 
-``` r
+```{r}
+#| label: cerebellum-ji10
 ggplot() +
   geom_brain(
     atlas = cerebellum_ji10(),
@@ -94,12 +105,10 @@ ggplot() +
   theme_void()
 ```
 
-<img src="man/figures/README-cerebellum-ji10-1.png"
-style="width:100.0%" />
-
 ## MDTB 10
 
-``` r
+```{r}
+#| label: cerebellum-mdtb10
 ggplot() +
   geom_brain(
     atlas = cerebellum_mdtb10(),
@@ -109,12 +118,10 @@ ggplot() +
   theme_void()
 ```
 
-<img src="man/figures/README-cerebellum-mdtb10-1.png"
-style="width:100.0%" />
-
 ## Xue 10
 
-``` r
+```{r}
+#| label: cerebellum-xue10
 ggplot() +
   geom_brain(
     atlas = cerebellum_xue10(),
@@ -124,12 +131,10 @@ ggplot() +
   theme_void()
 ```
 
-<img src="man/figures/README-cerebellum-xue10-1.png"
-style="width:100.0%" />
-
 ## Nettekoven 32
 
-``` r
+```{r}
+#| label: cerebellum-nettekoven32
 ggplot() +
   geom_brain(
     atlas = cerebellum_nettekoven32(),
@@ -139,12 +144,10 @@ ggplot() +
   theme_void()
 ```
 
-<img src="man/figures/README-cerebellum-nettekoven32-1.png"
-style="width:100.0%" />
-
 ## Nettekoven 68
 
-``` r
+```{r}
+#| label: cerebellum-nettekoven68
 ggplot() +
   geom_brain(
     atlas = cerebellum_nettekoven68(),
@@ -153,9 +156,6 @@ ggplot() +
   ) +
   theme_void()
 ```
-
-<img src="man/figures/README-cerebellum-nettekoven68-1.png"
-style="width:100.0%" />
 
 ## Data source
 
