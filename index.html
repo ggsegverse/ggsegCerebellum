@@ -67,91 +67,135 @@
 </h1></div>
 <!-- badges: start -->
 
-<p>Cerebellar Atlases for the ggsegverse Ecosystem.</p>
+<p>Cerebellar atlases for the ggseg ecosystem.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
+<p>We recommend installing the ggseg-atlases through the ggseg <a href="https://ggseg.r-universe.dev/ui#builds" class="external-link">r-universe</a>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># From r-universe</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"ggsegCerebellum"</span>, repos <span class="op">=</span> <span class="st">"https://ggsegverse.r-universe.dev"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>  ggseg <span class="op">=</span> <span class="st">"https://ggseg.r-universe.dev"</span>,</span>
+<span>  CRAN <span class="op">=</span> <span class="st">"https://cloud.r-project.org"</span></span>
+<span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># From GitHub</span></span>
-<span><span class="co"># install.packages("remotes")</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"ggsegverse/ggsegCerebellum"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"ggsegCerebellum"</span><span class="op">)</span></span></code></pre></div>
+<p>You can install this package from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"ggsegverse/ggsegCerebellum"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="atlases">Atlases<a class="anchor" aria-label="anchor" href="#atlases"></a>
+<h2 id="anatomical-atlas">Anatomical atlas<a class="anchor" aria-label="anchor" href="#anatomical-atlas"></a>
 </h2>
-<div class="section level3">
-<h3 id="cerebellum_anatom">cerebellum_anatom<a class="anchor" aria-label="anchor" href="#cerebellum_anatom"></a>
-</h3>
-<p>Anatomical lobules and nuclei (Diedrichsen et al., 2009).</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ggsegverse/ggsegCerebellum" class="external-link">ggsegCerebellum</a></span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">cerebellum_anatom</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-cerebellum_anatom-1.png" alt="" width="100%"></p>
-</div>
-<div class="section level3">
-<h3 id="cerebellum_buckner7">cerebellum_buckner7<a class="anchor" aria-label="anchor" href="#cerebellum_buckner7"></a>
-</h3>
-<p>Buckner 7-network cerebellar parcellation.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">cerebellum_buckner7</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-cerebellum_buckner7-1.png" alt="" width="100%"></p>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggsegverse.github.io/ggseg/" class="external-link">ggseg</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ggsegverse/ggsegCerebellum" class="external-link">ggsegCerebellum</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggsegverse.github.io/ggseg/reference/ggbrain.html" class="external-link">geom_brain</a></span><span class="op">(</span></span>
+<span>    atlas <span class="op">=</span> <span class="fu">cerebellum_anatom</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">label</span><span class="op">)</span>,</span>
+<span>    show.legend <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_void</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-cerebellum-anatom-1.png" style="width:100.0%"></p>
 </div>
-<div class="section level3">
-<h3 id="cerebellum_buckner17">cerebellum_buckner17<a class="anchor" aria-label="anchor" href="#cerebellum_buckner17"></a>
-</h3>
-<p>Buckner 17-network cerebellar parcellation.</p>
+<div class="section level2">
+<h2 id="buckner-7-network">Buckner 7-network<a class="anchor" aria-label="anchor" href="#buckner-7-network"></a>
+</h2>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">cerebellum_buckner17</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-cerebellum_buckner17-1.png" alt="" width="100%"></p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggsegverse.github.io/ggseg/reference/ggbrain.html" class="external-link">geom_brain</a></span><span class="op">(</span></span>
+<span>    atlas <span class="op">=</span> <span class="fu">cerebellum_buckner7</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">label</span><span class="op">)</span>,</span>
+<span>    show.legend <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_void</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-cerebellum-buckner7-1.png" style="width:100.0%"></p>
 </div>
-<div class="section level3">
-<h3 id="cerebellum_ji10">cerebellum_ji10<a class="anchor" aria-label="anchor" href="#cerebellum_ji10"></a>
-</h3>
-<p>Ji 10-network subcortical parcellation.</p>
+<div class="section level2">
+<h2 id="buckner-17-network">Buckner 17-network<a class="anchor" aria-label="anchor" href="#buckner-17-network"></a>
+</h2>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">cerebellum_ji10</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-cerebellum_ji10-1.png" alt="" width="100%"></p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggsegverse.github.io/ggseg/reference/ggbrain.html" class="external-link">geom_brain</a></span><span class="op">(</span></span>
+<span>    atlas <span class="op">=</span> <span class="fu">cerebellum_buckner17</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">label</span><span class="op">)</span>,</span>
+<span>    show.legend <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_void</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-cerebellum-buckner17-1.png" style="width:100.0%"></p>
 </div>
-<div class="section level3">
-<h3 id="cerebellum_mdtb10">cerebellum_mdtb10<a class="anchor" aria-label="anchor" href="#cerebellum_mdtb10"></a>
-</h3>
-<p>MDTB 10-region task-based parcellation (King et al., 2019).</p>
+<div class="section level2">
+<h2 id="ji-10">Ji 10<a class="anchor" aria-label="anchor" href="#ji-10"></a>
+</h2>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">cerebellum_mdtb10</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-cerebellum_mdtb10-1.png" alt="" width="100%"></p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggsegverse.github.io/ggseg/reference/ggbrain.html" class="external-link">geom_brain</a></span><span class="op">(</span></span>
+<span>    atlas <span class="op">=</span> <span class="fu">cerebellum_ji10</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">label</span><span class="op">)</span>,</span>
+<span>    show.legend <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_void</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-cerebellum-ji10-1.png" style="width:100.0%"></p>
 </div>
-<div class="section level3">
-<h3 id="cerebellum_xue10">cerebellum_xue10<a class="anchor" aria-label="anchor" href="#cerebellum_xue10"></a>
-</h3>
-<p>Xue 10-network individual parcellation.</p>
+<div class="section level2">
+<h2 id="mdtb-10">MDTB 10<a class="anchor" aria-label="anchor" href="#mdtb-10"></a>
+</h2>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">cerebellum_xue10</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-cerebellum_xue10-1.png" alt="" width="100%"></p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggsegverse.github.io/ggseg/reference/ggbrain.html" class="external-link">geom_brain</a></span><span class="op">(</span></span>
+<span>    atlas <span class="op">=</span> <span class="fu">cerebellum_mdtb10</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">label</span><span class="op">)</span>,</span>
+<span>    show.legend <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_void</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-cerebellum-mdtb10-1.png" style="width:100.0%"></p>
 </div>
-<div class="section level3">
-<h3 id="cerebellum_nettekoven32">cerebellum_nettekoven32<a class="anchor" aria-label="anchor" href="#cerebellum_nettekoven32"></a>
-</h3>
-<p>Nettekoven symmetric 32-region hierarchical parcellation.</p>
+<div class="section level2">
+<h2 id="xue-10">Xue 10<a class="anchor" aria-label="anchor" href="#xue-10"></a>
+</h2>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">cerebellum_nettekoven32</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-cerebellum_nettekoven32-1.png" alt="" width="100%"></p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggsegverse.github.io/ggseg/reference/ggbrain.html" class="external-link">geom_brain</a></span><span class="op">(</span></span>
+<span>    atlas <span class="op">=</span> <span class="fu">cerebellum_xue10</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">label</span><span class="op">)</span>,</span>
+<span>    show.legend <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_void</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-cerebellum-xue10-1.png" style="width:100.0%"></p>
 </div>
-<div class="section level3">
-<h3 id="cerebellum_nettekoven68">cerebellum_nettekoven68<a class="anchor" aria-label="anchor" href="#cerebellum_nettekoven68"></a>
-</h3>
-<p>Nettekoven symmetric 68-region hierarchical parcellation.</p>
+<div class="section level2">
+<h2 id="nettekoven-32">Nettekoven 32<a class="anchor" aria-label="anchor" href="#nettekoven-32"></a>
+</h2>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu">cerebellum_nettekoven68</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-cerebellum_nettekoven68-1.png" alt="" width="100%"> ## Data source</p>
-<p>All NIfTI parcellations from <a href="https://github.com/DiedrichsenLab/cerebellar_atlases" class="external-link">DiedrichsenLab/cerebellar_atlases</a> in MNI space.</p>
-<ul>
-<li>
-<strong>Date obtained</strong>: 2026-03-28</li>
-</ul>
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggsegverse.github.io/ggseg/reference/ggbrain.html" class="external-link">geom_brain</a></span><span class="op">(</span></span>
+<span>    atlas <span class="op">=</span> <span class="fu">cerebellum_nettekoven32</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">label</span><span class="op">)</span>,</span>
+<span>    show.legend <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_void</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-cerebellum-nettekoven32-1.png" style="width:100.0%"></p>
 </div>
+<div class="section level2">
+<h2 id="nettekoven-68">Nettekoven 68<a class="anchor" aria-label="anchor" href="#nettekoven-68"></a>
+</h2>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggsegverse.github.io/ggseg/reference/ggbrain.html" class="external-link">geom_brain</a></span><span class="op">(</span></span>
+<span>    atlas <span class="op">=</span> <span class="fu">cerebellum_nettekoven68</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">label</span><span class="op">)</span>,</span>
+<span>    show.legend <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_void</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-cerebellum-nettekoven68-1.png" style="width:100.0%"></p>
+</div>
+<div class="section level2">
+<h2 id="data-source">Data source<a class="anchor" aria-label="anchor" href="#data-source"></a>
+</h2>
+<p>Diedrichsen J &amp; Zotow E (2015). Surface-based display of volume-averaged cerebellar imaging data. <em>PLoS ONE</em>, 10(7), e0133402.</p>
 </div>
 </div>
   </div>
@@ -193,7 +237,7 @@
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://github.com/ggsegverse/ggsegCerebellum/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/ggsegverse/ggsegCerebellum/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
-<li><a href="https://ggsegverse.r-universe.dev/ggsegCerebellum" class="external-link"><img src="https://ggsegverse.r-universe.dev/badges/ggsegCerebellum" alt="r-universe"></a></li>
+<li><a href="https://ggseg.r-universe.dev/ggsegCerebellum" class="external-link"><img src="https://ggseg.r-universe.dev/badges/ggsegCerebellum.png" alt="r-universe"></a></li>
 </ul>
 </div>
 
