@@ -12,7 +12,7 @@
 #
 # Run with: Rscript data-raw/make_atlas.R
 
-devtools::load_all(here::here("..", "..", "ggseg.extra"))
+library(ggseg.extra)
 library(ggseg.formats)
 
 source_dir <- here::here("data-raw", "source")
@@ -82,7 +82,7 @@ for (atl in atlases) {
 
   result <- tryCatch(
     create_cerebellar_from_volume(
-      volume = vol_path,
+      input_volume = vol_path,
       input_lut = input_lut,
       atlas_name = atl$name,
       output_dir = file.path("data-raw", atl$name),
@@ -97,6 +97,10 @@ for (atl in atlases) {
   )
 
   if (is.null(result)) next
+
+  # Shaping is no longer part of creation, so a freshly built flatmap keeps
+  # every vertex the projection produced and plots jagged and over budget.
+  result <- atlas_polish(result)
 
   print(result)
   plot(result)
