@@ -37,9 +37,11 @@ for (nm in atlas_names) {
 
 describe("nettekoven32 atlas", {
   it("has functional domain codes", {
-    regions <- nettekoven32()$core$region
-    expect_true(any(grepl("^M\\d", regions)))
-    expect_true(any(grepl("^D\\d", regions)))
-    expect_true(any(grepl("^S\\d", regions)))
+    # `display` carries the source's own spelling of each label; `region`
+    # is the lower-case key derived from it, so the codes live here now.
+    codes <- ggseg.formats::atlas_display(nettekoven32())
+    expect_true(any(grepl("^M\\d", codes)))
+    expect_true(any(grepl("^D\\d", codes)))
+    expect_true(any(grepl("^S\\d", codes)))
   })
 })
